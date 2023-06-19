@@ -57,5 +57,21 @@ public class Main {
         formattedString = String.format(template, list);
         System.out.println(formattedString);
 
+        String dbEmailAddress = "Yuriy.Beck@Solocom.org";
+        String loginAddress = "yuriy.beck@solocom.org";
+        System.out.println(dbEmailAddress.equals(loginAddress));    //false
+
+        String t1 = dbEmailAddress.toLowerCase();
+        String t2 = loginAddress.toLowerCase();
+        System.out.println(t1.equals(t2));
+        System.out.println(t1 == t2);
+
+        System.out.println(dbEmailAddress.toUpperCase());
+
+        System.out.println(dbEmailAddress.toUpperCase().contains("@"));     //true
+        System.out.println(dbEmailAddress.toUpperCase().contains(".org"));  //false
+        System.out.println(dbEmailAddress.toUpperCase().contains(".ORG"));  //true
+        System.out.println(dbEmailAddress.toLowerCase().contains(".org"));  //true
+
     }
 }
